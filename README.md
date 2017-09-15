@@ -1,3 +1,6 @@
-# My express server start kit
+# mongoose-example
+express-server mongoose test
 
-1. 그냥 서버 만들때 맨날 넣는거 위주로
+https://velopert.com/594
+
+위 예제 진행
