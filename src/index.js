@@ -2,10 +2,21 @@ import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import mongoose from 'mongoose';
 
 import logger from './utils/logger';
 import routes from './routes';
 import config from './config';
+
+var db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+    // CONNECTED TO MONGODB SERVER
+    console.log("Connected to mongod server");
+});
+mongoose.connect('mongodb://mongo:27017/mongodb_tutorial');
+
+import Book from './models/book';
 
 const app = express();
 

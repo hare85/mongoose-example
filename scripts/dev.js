@@ -3,7 +3,7 @@ const nodemon = require('nodemon');
 
 process.env.NODE_ENV = 'development';
 
-nodemon('--exec babel-node ./src/index.js --watch ./src');
+nodemon('--legacy-watch --exec babel-node ./src/index.js --watch ./src');
 
 nodemon.on('start', () => {
   console.log('[nodemon] App has started');
